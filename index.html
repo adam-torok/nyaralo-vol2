@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Körös Nyaraló</title>
+      <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+      <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.2/css/bulma.min.css" />
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <script src="https://kit.fontawesome.com/75ad4010ea.js" crossorigin="anonymous"></script>
+      <script src="app.js"></script>
+   </head>
+   <body>
+      <div id="pageloader" class="pageloader is-active"><span class="title">Töltés</span></div>
+      <!-- START NAV -->
+      <nav class="navbar">
+         <div class="container">
+            <div class="navbar-brand">
+               <span class="navbar-burger burger" data-target="navbarMenu">
+               <span></span>
+               <span></span>
+               <span></span>
+               </span>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+               <div class="navbar-end">
+                  <a class="navbar-item is-active">
+                  Főoldal
+                  </a>
+                  <a class="navbar-item">
+                  Galéria
+                  </a>
+                  <a class="navbar-item">
+                  Szolgáltatások
+                  </a>
+                  <a class="navbar-item">
+                  Áraink
+                  </a>
+                  <a class="navbar-item">
+                  Elérhetőségek
+                  </a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- END NAV -->
+      <section class="hero is-info is-medium is-bold">
+         <div class="hero-body">
+            <div class="container has-text-centered">
+               <p class="subtitle is-5">6640 ♦ CSONGRÁD ♦ KÖRÖS</p>
+               <br>
+               <h1 class="title is-1">KÖRÖS-TOROK-NYARALÓ</h1>
+               <br>
+               <p class="subtitle is-5"> „…ilyen szép partja sehol sincs a Tiszának”</p>
+            </div>
+         </div>
+      </section>
+      <div class="container">
+      <!-- START ARTICLE FEED -->
+      <section class="articles">
+      <div class="column is-10 is-offset-1">
+         <!-- START ARTICLE -->
+         <div class="card article">
+            <div class="card-content">
+               <div class="media">
+                  <div class="media-content has-text-centered">
+                     <h1 class="title">Miért hozzánk?</h1>
+                     <div class="tags has-addons level-item">
+                     </div>
+                  </div>
+               </div>
+               <div class="tile is-ancestor">
+                  <div class="tile is-parent">
+                     <article class="tile is-child box">
+                        <p class="title">Horgászat
+                            <i class="icon fas fa-fish"></i>
+                        </p>
+                        <p class="subtitle">A Körös torkolatánál süllőre, harcsára és balínra is lehet horgászni. A napijegyeket megvásárolhatják akár az üdülőterületen lévő információs központban is.
+                        </p>
+                     </article>
+                  </div>
+                  <div class="tile is-parent">
+                     <article class="tile is-child box">
+                        <p class="title">Pihenés
+                            <i class="icon far fa-smile"></i>
+                        </p>
+                        <p class="subtitle">Feltöltődés, Bográcsozási lehetőség (tüzifa ingyenes), Tárcsán sütés-főzés (tüzifa ingyenes), Szalonnasütési lehetőség (tüzifa ingyenes)
+                        </p>
+                     </article>
+                  </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                           <p class="title">Strand
+                               <i class="icon fas fa-sun"></i>
+                           </p>
+                           <p class="subtitle">Strandolni vágyóknak a szabadstrand a nyaralótól kb. 150 méterre található
+                           </p>
+                        </article>
+                     </div>
+                     <div class="tile is-parent">
+                        <article class="tile is-child box">
+                           <p class="title">Természet
+                               <i class="icon fab fa-pagelines"></i>
+                           </p>
+                           <p class="subtitle">Nyugodt környezet, körös-torokra néző kilátás.
+                           </p>
+                        </article>
+                     </div>
+                </div>  
+               </div>
+            </div>
+            <div class=" article">
+                <div class="">
+                   <section class="section">
+                      <div class="container is-fluid">
+                         <div class="columns">
+                            <div class="column">
+                               <img src="images/nyaraló-1-10.jpg" onclick="openModal();currentSlide(1)">
+                               <img src="images/nyaraló-1-11.jpg" onclick="openModal();currentSlide(2)">
+                               <img src="images/nyaraló-16.jpg" onclick="openModal();currentSlide(3)">
+                               <img src="images/nyaraló-17.jpg" onclick="openModal();currentSlide(4)">
+                            </div>
+                            <div class="column">
+                               <img src="images/nyaraló-1-12.jpg" onclick="openModal();currentSlide(5)">
+                               <img src="images/nyaraló-1-13.jpg" onclick="openModal();currentSlide(6)">
+                               <img src="images/nyaraló-18.jpg" onclick="openModal();currentSlide(7)">
+                               <img src="images/nyaraló-19.jpg" onclick="openModal();currentSlide(8)">
+                            </div>
+                            <div class="column">
+                               <img src="images/nyaraló-14.jpg" onclick="openModal();currentSlide(9)">
+                               <img src="images/nyaraló-15.jpg" onclick="openModal();currentSlide(10)">
+                               <img src="images/nyaraló-20.jpg" onclick="openModal();currentSlide(11)">
+                               <img src="images/nyaraló-21.jpg" onclick="openModal();currentSlide(12)">
+                            </div>
+                         </div>
+                         <div class="modal" id="myModal">
+                            <div class="modal-content is-vcentered">
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-1-10.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-1-11.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-16.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-17.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-1-12.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-1-13.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-18.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-19.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-14.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-15.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-20.jpg">
+                               </div>
+                               <div class="item-slide">
+                                  <img src="images/nyaraló-21.jpg">
+                               </div>
+                            </div>
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <button onclick="closeModal()" class="modal-close is-large" aria-label="close"></button>
+                         </div>
+                      </div>
+                   </section>
+                </div>
+             </div>
+             <div class="card article">
+                <div class="card-content">
+                   <div class="content article-body">
+                       <h1 class="title">Házirend</h1>
+                       <div class="table-container">
+                        <h3 class=" is-4">Bejelentkezés</h1>
+                        <p class="thing-item">15:00 - 16:00 Amennyiben később érkeznél, mint ahogy a szálláshely vendéget tud fogadni, kérjük, jelezd!                        </p>
+                        <h3 class=" is-4">Kijelentkezés</h1>
+                        <p class="thing-item">10:00 - ig</p>
+                        <h3 class=" is-4">Elfogadott pénznemek
+                        </h1>
+                        <p class="thing-item">HUF (Ft)
+
+                        </p>
+                        <h3 class=" is-4">Elfogadott fizetőeszközök
+                        </h1>
+                        <p class="thing-item">Készpénz</p>
+                        <h3 class=" is-4">Idegenforgalmi adó
+                        </h1>
+                        <p class="thing-item">Az ár nem tartalmazza, mely 18 éves kor felett fizetendő, 300 Ft / fő / éj
+
+                        </p>
+                    </div>
+                   </div>
+                </div>
+             </div>
+             <!-- END ARTICLE -->
+             <div class="article pricing-table">
+                <div class="card pricing-plan is-primary">
+                   <div class="plan-header">4 Személyre </div>
+                   <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency"></span>4500</span>Ft / 2éj</div>
+                   <div class="plan-items">
+                      <div class="plan-item">Ingyenes Parkolás</div>
+                      <div class="plan-item">Körös-torok Kemping és Szabadstrand</div>
+                      <div class="plan-item">Városi Gyógyfürdő- és Uszoda</div>
+                      <div class="plan-item">Ingyenes WIFI</div>
+                      <div class="plan-item">Bababarát szálláshely</div>
+                      <div class="plan-item">3 szoba, 8 férőhely</div>
+                      <div class="plan-item">Légkondícionálás</div>
+                   </div>
+                   <div class="plan-footer">
+                      <button class="button is-primary is-fullwidth">Foglalás!</button>
+                   </div>
+            
+                </div>
+                <div class="card pricing-plan is-primary">
+                    <div class="plan-header">4 Személyre </div>
+                    <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency"></span>4500</span>Ft / 2éj</div>
+                    <div class="plan-items">
+                       <div class="plan-item">Ingyenes Parkolás</div>
+                       <div class="plan-item">Körös-torok Kemping és Szabadstrand</div>
+                       <div class="plan-item">Városi Gyógyfürdő- és Uszoda</div>
+                       <div class="plan-item">Ingyenes WIFI</div>
+                       <div class="plan-item">Bababarát szálláshely</div>
+                       <div class="plan-item">3 szoba, 8 férőhely</div>
+                       <div class="plan-item">Légkondícionálás</div>
+                    </div>
+                    <div class="plan-footer">
+                       <button class="button is-primary is-fullwidth">Foglalás!</button>
+                    </div>
+             
+                 </div>
+                <div style="width:100%" class="notification is-primary">
+                   Áraink forintban értendőek és NEM tartalmazzák az ÁFÁ-t. A ház maximum 8 férőhelyes és minimum 2 éjszaka foglalható!.
+                </div>
+             </div>
+         </div>
+      
+         <!-- END ARTICLE FEED -->
+      </div>
+      <section class="container">
+        <div class="columns is-multiline">
+          <div class="column is-8 is-offset-2 register">
+            <div class="columns">
+              <div class="column left">
+                <h1 class="title is-1">Elérhetőségek</h1>
+                <h2 class="subtitle colored is-4">Ha bármilyen kérdés merül fel benned...</h2>
+                <p><strong>Aradi László</strong> </p>
+                <p>Telefonszám: +0630 623 9946</p>
+                <p>Email cím: aradilaszlo75@gmail.com</p>
+                <p ><strong class="colored">Várunk benneteket!</strong> 
+                </p>
+              </div>
+              <div class="column right has-text-centered">
+                <h1 class="title is-4">Üzenj nekünk!</h1>
+                <p class="description">Ha kérdés merült fel benned a szállással kapcsolatban</p>
+                <form>
+                  <div class="field">
+                    <div class="control">
+                      <input class="input is-medium" type="text" placeholder="Name">
+                    </div>
+                  </div>
+  
+                  <div class="field">
+                    <div class="control">
+                      <input class="input is-medium" type="email" placeholder="Email">
+                    </div>
+                    <div class="field"><div class="control">
+                        <input class="input is-medium" type="text" placeholder="Üzeneted, kérdésed"></input>
+                      </div></div>
+                    
+                  </div>
+                  <button class="button is-block is-primary is-fullwidth is-medium">Submit</button>
+                  <br />
+                  <small><em>A levelekre 1 napon belül válaszolunk.</em></small>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="column is-8 is-offset-2">
+            <br>
+            <nav class="level">
+              <div class="level-left">
+                <div class="level-item">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span> &emsp;
+                  <span class="icon">
+                    <i class="fab fa-facebook"></i>
+                  </span> &emsp;
+                  <span class="icon">
+                    <i class="fab fa-instagram"></i>
+                  </span> &emsp;
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span> &emsp;
+                  <span class="icon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="level-right">
+                <small class="level-item" style="color: var(--textLight)">
+                  &copy; Aradi Ferenc. All Rights Reserved.
+                </small>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <script async type="text/javascript" src="../js/bulma.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+         //The first argument are the elements to which the plugin shall be initialized
+         //The second argument has to be at least a empty object or a object with your desired options
+         OverlayScrollbars(document.querySelectorAll("body"), { });
+         });
+      </script>        
+   </body>
+</html>
