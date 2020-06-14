@@ -15,16 +15,14 @@ if(filter_var($email,FILTER_SANITIZE_EMAIL)){
     $mail->Port = 587;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->SMTPAuth = true;
-    $mail->Username  = 'mymusicprodtestemail@gmail.com';              // SMTP felhnev
-    $mail->Password  = 'Asd12345qwe';           // SMTP jelszó
+    $mail->Username  = 'aradikorosnyaralo@gmail.com';              // SMTP felhnev
+    $mail->Password  = 'koros328612';           // SMTP jelszó
     //Recipients
     $mail->setFrom('mymusicprodtestemail@gmail.com');                 //Kitől kapja az üzenetet
     $mail->CharSet = 'UTF-8';
     $mail->Mailer = "smtp";
     $mail->addAddress($email);                     // Felhasználó email címe
     $mail->addReplyTo('mymusicprodtestemail@gmail.com', 'Information');         //Kinek válaszoljon
-    $mail->addCC('mymusicprodtestemail@gmail.com');
-    $mail->addBCC('mymusicprodtestemail@gmail.com');             //kinek küldje el még
     // EMAIL KÜLDÉS
     $mail->isHTML(true);                          // Set email format to HTML
     $mail->Subject = 'Körös Toroki nyaraló foglalása';
