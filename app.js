@@ -1,34 +1,67 @@
-setTimeout(function() {
-  $('#pageloader').fadeOut('slow');
-}, 1500);
+var today = new Date();
+today.toISOString().substring(0, 10);
+var tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 2);
 
-function openModal() {
-    document.getElementById('myModal').style.display = "block";
-  }
-  
-  function closeModal() {
-    document.getElementById('myModal').style.display = "none";
-  }
-  
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("item-slide");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-  }
+
+var options = {
+	allowSameDayRange : false,
+	lang : 'hu',
+	displayMode	: 'inline',
+	weekStart : 1,
+	labelFrom : 'Mettől',
+	dateFormat: 'YYYY-MM-DD',
+	labelTo : 'Meddig',
+	todayLabel : 'Ma',
+	clearLabel	: 'Törlés',
+	startDate: today,
+	endDate: tomorrow,
+	minDate: today
+}
+
+
+const calendars = bulmaCalendar.attach('[type="date"]', options);
+const element = document.querySelector('#rentdate');
+
+$('body').click(function(){
+	console.log(element.value);
+})
+
+$("#closemodal").on('click',function(){
+	$(".modal").fadeOut('fast');
+})
+
+$("#rent").submit(function(e) {
+	let msg = $("#msg").val();
+	let name = $("#name").val();
+	let email = $("#email").val();
+	let interval = element.value;
+    e.preventDefault();
+    $.ajax({
+		type: "POST",
+		url: 'php_logic/sendmail.php',
+		data: { name:name, msg: msg, email:email, interval:interval} ,
+		success: function(data)
+		{
+			$("#success").fadeIn('fast');
+			console.log(element.value);
+		}
+		})
+});
+
+$("#contact-form").submit(function(e) {
+	let msg = $("#cmsg").val();
+	let name = $("#cname").val();
+	let email = $("#cemail").val();
+    e.preventDefault();
+    $.ajax({
+		type: "POST",
+		url: 'php_logic/sendcontactmail.php',
+		data: { cname:name, cmsg: msg, cemail:email} ,
+		success: function(data)
+		{
+			$("#success").fadeIn('fast');
+			console.log(bulmaCalendar.endTime);
+		}
+		})
+});
